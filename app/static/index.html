@@ -2,22 +2,30 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Generador de QR</title>
+  <title>Generador QR</title>
   <link rel="stylesheet" href="/css/style.css" />
   <script src="/js/main.js" defer></script>
-  
 </head>
-<body>
-  <h1>Generador de Código QR</h1>
-  <input type="text" id="qr-text" placeholder="Introduce texto o URL" size="40" />
-  <br />
-  <button onclick="generateQR()">Generar QR</button>
+<body class="page">
+  <div class="qr-app">
+    <h1 class="qr-app__title">Generador de Código QR</h1>
 
-  <div id="result">
-    <img id="qr-image" src="" alt="QR generado" style="display:none;" />
-    <br />
-    <a id="download-link" href="#" download style="display:none;">Descargar QR</a>
+    <div class="qr-app__form">
+      <input
+        class="qr-app__input"
+        type="text"
+        id="qr-text"
+        placeholder="Introduce texto o URL"
+      />
+      <button class="qr-app__button" onclick="generateQR()">Generar QR</button>
+    </div>
+
+    <div class="qr-app__result">
+      <img class="qr-app__image" id="qr-image" src="" alt="QR generado" />
+      <a class="qr-app__download" id="download-link" href="#" download>Descargar QR</a>
+    </div>
   </div>
 
+  
 </body>
 </html>

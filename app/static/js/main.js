@@ -12,8 +12,10 @@ async function generateQR() {
         return;
     }
 
-    // Crear blob e imagen
+    // Crear blob e imagen Convierte la respuesta (imagen QR) a un Blob (objeto binario).
     const blob = await response.blob();
+    //Convierte el blob en una URL temporal del tipo blob:http://localhost/...
+    //Esa URL se puede usar como fuente de una imagen (<img>).
     const imageUrl = URL.createObjectURL(blob);
 
     // Mostrar imagen
